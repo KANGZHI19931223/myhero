@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2 class="sub-header">Hero List</h2>
-        <a class="btn btn-success" href="add.html">Add</a>
+        <router-link class="btn btn-success" to="/heroes/add">Add</router-link>
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>

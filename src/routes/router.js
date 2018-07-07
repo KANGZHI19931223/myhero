@@ -9,6 +9,9 @@ import EquipsList from '../views/equips/List.vue';
 
 import WeaponsList from '../views/weapons/List.vue';
 
+// 引入添加英雄组件
+import AddHero from '../views/heroes/Add.vue';
+
 // 如果使用模块化机制编程，导入Vue和VueRouter，要调用 Vue.use(VueRouter)
 Vue.use(VueRouter);
 
@@ -23,7 +26,9 @@ const router = new VueRouter({
 
         {name: 'equips', path: '/equips', component: EquipsList},
 
-        {name: 'weapons', path: '/weapons', component: WeaponsList}
+        {name: 'weapons', path: '/weapons', component: WeaponsList},
+        // 配置添加英雄路由
+        {name: 'add', path: '/heroes/add', component: AddHero}
 
     ]
 
