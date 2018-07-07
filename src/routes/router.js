@@ -15,6 +15,8 @@ Vue.use(VueRouter);
 // 2 创建路由对象
 const router = new VueRouter({
 
+    linkActiveClass: 'active',
+
     routes: [
         // 3 配置路由规则
         {name: 'heroes', path: '/heroes', component: HeroesList},
