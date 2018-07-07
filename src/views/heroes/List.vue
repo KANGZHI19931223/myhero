@@ -20,7 +20,7 @@
                     <td>
                     <a href="edit.html">edit</a>
                     &nbsp;&nbsp;
-                    <a href="javascript:window.confirm('Are you sure?')">delete</a>
+                    <a @click.prevent="handleDel(item.id)">delete</a>
                     </td>
                 </tr>
                 </tbody>
@@ -30,6 +30,10 @@
 </template>
 
 <script>
+    // 二 . 完成删除功能
+        // 1 给添加按钮绑定点击事件
+        // 2 发送请求(携带的信息是对应的id)
+
     // 1 引入axios
     import axios from 'axios';
 
@@ -56,6 +60,34 @@
                     .then((res) => {
 
                         this.list = res.data;
+
+                    })
+
+            },
+
+            handleDel (id) {
+
+                if (!confirm('您确定要删除么')) {
+
+                    return;
+
+                }
+
+                axios
+                    // 使用模板字符串拼接变量
+                    .delete(`http://localhost:3000/heroes/${id}`)
+
+                    .then((res) => {
+
+                        if (res.status === 200) {
+                            // 删除成功,调用getData方法重新渲染数据
+                            this.getData();
+
+                        } else {
+
+                            alert('删除失败');
+
+                        }
 
                     })
 
