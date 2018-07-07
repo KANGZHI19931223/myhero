@@ -45,7 +45,7 @@ export default {
 
             axios
 
-                .post('http://localhost:3000/heroes', this.formData)
+                .post('heroes', this.formData)
 
                 .then((res) => {
 

@@ -57,7 +57,7 @@ export default {
             // 2 发送请求获取对应id的英雄数据
             axios
 
-                .get(`http://localhost:3000/heroes/${this.id}`)
+                .get(`heroes/${this.id}`)
 
                 .then((res) => {
 
@@ -79,7 +79,7 @@ export default {
             // 获取表单数据, 发送请求
             axios
 
-                .put(`http://localhost:3000/heroes/${this.id}`, this.formData)
+                .put(`heroes/${this.id}`, this.formData)
 
                 .then((res) => {
 

@@ -57,7 +57,7 @@
                 // 2 发送请求,获取英雄列表数据
                 axios
 
-                    .get('http://localhost:3000/heroes')
+                    .get('heroes')
 
                     .then((res) => {
 
@@ -77,7 +77,7 @@
 
                 axios
                     // 使用模板字符串拼接变量
-                    .delete(`http://localhost:3000/heroes/${id}`)
+                    .delete(`heroes/${id}`)
 
                     .then((res) => {
 
