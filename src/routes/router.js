@@ -12,6 +12,9 @@ import WeaponsList from '../views/weapons/List.vue';
 // 引入添加英雄组件
 import AddHero from '../views/heroes/Add.vue';
 
+// 引入修改英雄组件
+import EditHero from '../views/heroes/Edit.vue';
+
 // 如果使用模块化机制编程，导入Vue和VueRouter，要调用 Vue.use(VueRouter)
 Vue.use(VueRouter);
 
@@ -28,7 +31,9 @@ const router = new VueRouter({
 
         {name: 'weapons', path: '/weapons', component: WeaponsList},
         // 配置添加英雄路由
-        {name: 'add', path: '/heroes/add', component: AddHero}
+        {name: 'add', path: '/heroes/add', component: AddHero},
+        // 配置修改英雄路由
+        {name: 'edit', path: '/heroes/edit/:id', component: EditHero}
 
     ]
 

@@ -18,7 +18,7 @@
                     <td>{{ item.name }}</td>
                     <td>{{ item.gender }}</td>
                     <td>
-                    <a href="edit.html">edit</a>
+                    <router-link :to="`/heroes/edit/${item.id}`">edit</router-link>
                     &nbsp;&nbsp;
                     <a @click.prevent="handleDel(item.id)">delete</a>
                     </td>
@@ -32,7 +32,9 @@
 <script>
     // 二 . 完成删除功能
         // 1 给添加按钮绑定点击事件
-        // 2 发送请求(携带的信息是对应的id)
+        // 2 发送请求(携带的信息是对应的id)delete请求
+    // 三. 完成修改功能
+        // 1 页面跳转(url上携带对应的id信息)
 
     // 1 引入axios
     import axios from 'axios';
@@ -92,6 +94,7 @@
                     })
 
             }
+
 
         },
 
