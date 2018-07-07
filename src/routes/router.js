@@ -24,6 +24,9 @@ const router = new VueRouter({
     linkActiveClass: 'active',
 
     routes: [
+        // 配置默认路由
+        {name: 'home', path: '/', redirect: '/heroes'},
+
         // 3 配置路由规则
         {name: 'heroes', path: '/heroes', component: HeroesList},
 
