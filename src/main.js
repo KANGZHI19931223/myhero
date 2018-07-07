@@ -7,11 +7,8 @@ import router from './routes/router';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../src/assets/css/index.css';
 
-import axios from 'axios';
-
-axios.defaults.baseURL = 'http://localhost:3000/';
-
-Vue.prototype.$http = axios;
+import MyAxios from './plugins/myaxios';
+Vue.use(MyAxios);
 
 new Vue({
   el: '#app',
